@@ -1,0 +1,17 @@
+1. It doesn't support Windows XP
+  easytrader 0.20.1 requries python 3.6+ while the latest python 3 which supports Windows XP is python 3.4, so need to install Windows 7 
+for the trading.
+2. On virtualbox Windows 7 (from microsoft testing VM), got pandas issue: 
+  ImportError: DLL load failed while importing aggregations: The specified module could not be found. The solution:
+  pip uninstall pandas
+  pip install pandas==1.0.1
+  https://stackoverflow.com/questions/60763529/unable-to-import-pandas-pandas-libs-window-aggregations
+3. Windows 7 Virtualbox Image
+  Download the official Microsoft Win7 image for Virtualbox: https://archive.org/details/ie11.win7.virtualbox 
+  Run the below from Windows 7 host to check SHA256: certUtil -hashfile "IE11.Win7.VirtualBox.zip" SHA256:
+        C:\Users\Peter\Downloads>certUtil -hashfile "IE11.Win7.VirtualBox(1).zip" SHA256
+
+      SHA256 哈希(文件 IE11.Win7.VirtualBox(1).zip):
+      fe 47 f2 43 4c dd 15 16 2d 3c 98 61 69 5d e1 9e 6e 56 0c c2 a4 9a 85 3e 99 3b e8
+       c1 89 42 2e 74
+      CertUtil: -hashfile 命令成功完成。
